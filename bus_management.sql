@@ -1,0 +1,66 @@
+use brms;
+DROP TABLE IF EXISTS BUS;
+CREATE TABLE BUS
+(
+bus_id  varchar(5) primary key,
+bus_registration_number varchar(14) unique key,
+capcity int,
+ type char(9)
+
+);
+CREATE TABLE BUS_MANAGEMENT(
+BUS_ID VARCHAR(10),
+SEAT_NO VARCHAR(10),
+STATUS  VARCHAR(10),
+SEAT_TYPE char(1),
+FOREIGN KEY (BUS_ID) REFERENCES BUS(BUS_ID) 
+);
+DROP TABLE BUS_MANAGEMENT;
+TRUNCATE TABLE BUS;
+INSERT INTO BUS
+VALUES
+('B001','AA-99-BC-8855', 10,'NAC'),
+('B002','AA-91-BC-8525', 10,'NAC'),
+('B003','AC-14-HG-8741', 10,'AC');
+
+SELECT * FROM BUS;
+
+INSERT INTO BUS_MANAGEMENT
+VALUES
+('B001', 'S1',NULL,'L'),
+('B001', 'S2',NULL,'L'),
+('B001', 'S3',NULL,'L'),
+('B001', 'S4',NULL,'L'),
+('B001', 'S5',NULL,'L'),
+('B001', 'S6',NULL,'U'),
+('B001', 'S7',NULL,'U'),
+('B001', 'S8',NULL,'U'),
+('B001', 'S9',NULL,'U'),
+('B001', 'S10',NULL,'U');
+SELECT * FROM BUS_MANAGEMENT;
+INSERT INTO BUS_MANAGEMENT
+VALUES
+('B002', 'S1',NULL,'L'),
+('B002', 'S2',NULL,'L'),
+('B002', 'S3',NULL,'L'),
+('B002', 'S4',NULL,'L'),
+('B002', 'S5',NULL,'L'),
+('B002', 'S6',NULL,'U'),
+('B002', 'S7',NULL,'U'),
+('B002', 'S8',NULL,'U'),
+('B002', 'S9',NULL,'U'),
+('B002', 'S10',NULL,'U');
+
+INSERT INTO BUS_MANAGEMENT
+VALUES
+('B003', 'S1',NULL,'L'),
+('B003', 'S2',NULL,'L'),
+('B003', 'S3',NULL,'L'),
+('B003', 'S4',NULL,'L'),
+('B003', 'S5',NULL,'L'),
+('B003', 'S6',NULL,'U'),
+('B003', 'S7',NULL,'U'),
+('B003', 'S8',NULL,'U'),
+('B003', 'S9',NULL,'U'),
+('B003', 'S10',NULL,'U');
+
