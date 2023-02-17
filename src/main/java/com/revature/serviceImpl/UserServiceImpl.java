@@ -29,10 +29,7 @@ public class UserServiceImpl extends UserService {
 	   
 	    ResultSet rs = ps.executeQuery();
 	    if(rs.next()) {
-	    	/*if(loginId.equals(rs.getString(1)))
-	    			if(pwd.equals(rs.getString(2))){
-	    				System.out.println(rs.getString(1) +" "+ rs.getString(2));
-	    		//con.close();*/
+	    	
 	    		return true;
 	    		
 	    	}

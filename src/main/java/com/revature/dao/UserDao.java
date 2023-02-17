@@ -9,9 +9,10 @@ public  interface  UserDao {
 	
 	public int add(User user) throws SQLException;
 
-	public int delete(String loginId , String password) throws SQLException;
+	public int delete(String loginId ) throws SQLException;
 
-	public User getUser(String loginId , String password) throws SQLException;
+	public User getUser(String loginId ) throws SQLException;
 
-	public int update(User user ,String loginId , String password) throws SQLException;
+	public int update(User user ,String loginId ) throws SQLException;
+	public List<User> getAllUsers() throws SQLException;
 }

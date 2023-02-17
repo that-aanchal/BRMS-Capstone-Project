@@ -1,7 +1,12 @@
 package com.revature.model;
 
 public class User {
- private String loginId;
+ public User(String loginId, String password) {
+		super();
+		this.loginId = loginId;
+		this.password = password;
+	}
+private String loginId;
  private String password;
  private String firstName;
  private String lastName;

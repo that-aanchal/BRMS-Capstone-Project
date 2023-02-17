@@ -1,11 +1,11 @@
 package com.revature.config;
 
-import java.io.IOException;
-import java.io.InputStream;
+//import java.io.IOException;
+//import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Properties;
+//import java.util.Properties;
 import java.util.ResourceBundle;
 
 public class DatabaseConnection {
@@ -27,17 +27,10 @@ public class DatabaseConnection {
 		}catch(ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
-		/*System.out.println("dburl :" + dburl);
-		System.out.println("driver :" + driver);
-		System.out.println("username :" + username);
-		System.out.println("password :" + password);*/
+		
 		
 	}
-	/*public static void main(String[] args) {
-		usingResourceBundle();
-		//usingPropertiesClassStatic();
-		
-	}*/
+	
 	public static Connection getConnection() {
 		return conn;
 	}
