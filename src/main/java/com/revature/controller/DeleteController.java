@@ -34,6 +34,7 @@ public class DeleteController extends HttpServlet {
 		String loginID = request.getParameter("loginId");
 		UserDaoImpl udi = new UserDaoImpl();
 		try {
+			
 			udi.delete(loginID);
 			RequestDispatcher rd = request.getRequestDispatcher("afterDelete.jsp");
 			rd.forward(request, response);

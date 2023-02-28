@@ -50,10 +50,11 @@ public class LoginController extends HttpServlet {
 				}
 			}
 			if(!valid) {
-				out.print("Please Enter valid userid or password");
+				request.setAttribute("invalidUser" , true);
+				//out.print("Please Enter valid userid or password");
 				RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
 				rd.forward(request, response);
-				out.println("Please Enter valid userid or password");
+				//out.println("Please Enter valid userid or password");
 			}
           }
 			
